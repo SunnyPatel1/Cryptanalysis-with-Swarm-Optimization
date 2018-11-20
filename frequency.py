@@ -21,14 +21,14 @@ def getInputs(fileName):
 
 
 def main():
-    monoHz = getInputs("monogram.txt")
-    biHz = getInputs("bigram.txt")
+    monoHz = getInputs("assets/monogram.txt")
+    biHz = getInputs("assets/bigram.txt")
 
-    f = open('monogram.pckl', 'wb')
+    f = open('assets/monogram.pckl', 'wb')
     pickle.dump(monoHz, f)
     f.close()
 
-    f = open('bigram.pckl', 'wb')
+    f = open('assets/bigram.pckl', 'wb')
     pickle.dump(biHz, f)
     f.close()
 

@@ -45,7 +45,7 @@ def getBigram():
     return bigram
 
 def getObservedMonogram(decrypt):
-    f = open('monogram.pckl', 'rb')
+    f = open('assets/monogram.pckl', 'rb')
     monogram = pickle.load(f)
     f.close()
     observedMono = dict.fromkeys(monogram, 0.0)
@@ -58,7 +58,7 @@ def getObservedMonogram(decrypt):
 
 
 def getObservedBigram(decrypt):
-    f = open('bigram.pckl', 'rb')
+    f = open('assets/bigram.pckl', 'rb')
     bigram = pickle.load(f)
     f.close()
     observedMono = dict.fromkeys(bigram, 0.0)
@@ -74,10 +74,10 @@ def getObservedBigram(decrypt):
 def getFitness(decrypt):
     observedMono = getObservedMonogram(decrypt)
     observedBi = getObservedBigram(decrypt)
-    f = open('monogram.pckl', 'rb')
+    f = open('assets/monogram.pckl', 'rb')
     englishMono = pickle.load(f)
     f.close()
-    f = open('bigram.pckl','rb')
+    f = open('assets/bigram.pckl','rb')
     englishBi = pickle.load(f)
     f.close()
 
@@ -104,5 +104,5 @@ def testFitnessFunction():
     return fitness
 
 if __name__ == "__main__":
-    print(toString([17,8,5]))
+    print(getFitness([1,2,3,4]))
     
