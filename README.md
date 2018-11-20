@@ -52,7 +52,7 @@ Similar to a convolutional neural network, we may want to drop some of the parti
 
 Further testing required.
 
-### Kasikov Method
+### Kasiki Method
 
 While the algorithm currently requires us to enter the length of the key, this does not translate well into the real world. We can, however use the Kasiki method for finding the length of the key.
 
