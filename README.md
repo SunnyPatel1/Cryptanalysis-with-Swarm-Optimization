@@ -28,9 +28,11 @@ E = D(Ci, Ki) = (Ci - Ki)%26
 
 ## Particle Swarm Optimization
 
-Particle Swarm Optimization is an optimization technique useful for finding global extrema. As such, a **loss function** needs to be defined. 
+Particle Swarm Optimization (PSO) is an optimization technique useful for finding global extrema. As such, a **loss function** needs to be defined. 
 
-A swarm of particles in the solution space are assigned random velocities, but naturally gravitate towards the particle with the best solution, as well as the best solution it previously held. The best solution is defined as the one with the lowest cost function.
+PSO is contrived from nature, much like neural networks. It models bacteria and small-organism behavior in swarms (or whatever ecological jargon) react, move and behave given a region of reward. In our application, PSO models a bunch of particles (points in a solution space), each representing a possible cipher key.
+
+The movement of the particles is governed by their position and velocity, which changes with each iteration, gravitating towards the global best solution as well as the personal best solution. The self-confidence weight and the social confidence weight (C1 and C2 respectively) dictate the magnitude of gravitation towards the personal best and the global best positions.
 
 ### Defining a Loss Function
 
@@ -44,13 +46,13 @@ I defined a solution space that was n-dimensional, where n is the number of char
 
 Having a dimension per character would help because it relates each of them, whereas flattening a dimension (having a 1-dimensional representation of the solution space that is 26^n in cardinality) would result in locations that are abstractly related (AAA would be closer to AZZ than AAZ)
 
-### Dropout
+### Dropout using Markov Chain Walk
 
 Similar to a convolutional neural network, we may want to drop some of the particles. This helps avoid  avoid local minima. The reason is because the local minima general surrounded the global minimum, and so particles often circled around it. A greater weight for the social factor may also accommodate for this. 
 
 Further testing required.
 
-### Finding the length of the Key
+### Kasikov Method
 
 While the algorithm currently requires us to enter the length of the key, this does not translate well into the real world. We can, however use the Kasiki method for finding the length of the key.
 
