@@ -3,11 +3,12 @@ Using particle swarm optimization to find cipher keys in substitution ciphers (V
 
 # TODO:
 
-* REPORT ([HERE](https://docs.google.com/document/d/1sL1yEqlxJrUe_83DjtGZta0P8ysa6h3XHS930Ezar_k/edit), not formatted yet)
-* Refactor and comment
-* Add a brute force approach for comparison purposes
-* Utilize Kasiki method to determine key length
-* Add dropout
+- [ ] REPORT ([HERE](https://docs.google.com/document/d/1sL1yEqlxJrUe_83DjtGZta0P8ysa6h3XHS930Ezar_k/edit), not formatted yet)
+- [ ] Refactor 
+- [ ] Comment
+- [ ] Add a brute force approach for comparison purposes
+- [ ] Utilize Kasiki method to determine key length
+- [ ] Add dropout
 
 ## Vigenere Cipher
 
