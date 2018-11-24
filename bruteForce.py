@@ -23,5 +23,6 @@ for i in range(1, key_length + 1):
             min_decrypt_arr = decrypted
             best_key = key
 
-    print(vt.toString(min_decrypt_arr))
-    print('KEY: ' + best_key)
+print('\nOutput: ')
+print(vt.toString(min_decrypt_arr))
+print('KEY: ' + best_key)
