@@ -1,5 +1,5 @@
-import vigenereTools as vt      # Import Common Tools
-import itertools                # Import
+import vigenereTools as vt      # Import Vigenere Tools
+import itertools                # Import Itertools
 
 # Initiate Variables: min fitness function, best decryption, and best key
 min = -1
